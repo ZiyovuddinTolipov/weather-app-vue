@@ -1,6 +1,6 @@
 <template >
     <div>
-        <h1>Hello Wather app</h1>
+        <!-- <h1>Hello Wather app</h1> -->
     </div>
 </template>
 <script>
