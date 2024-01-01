@@ -35,7 +35,7 @@ const previewCity = (searchResult) => {
         params: {state:state.replaceAll(" ",""), city:city},
         query:{
             lat:searchResult.geometry.coordinates[1],
-            lng:searchResult.geometry.coordinates[0],
+            lon:searchResult.geometry.coordinates[0],
             preview:true,
         }
     })
