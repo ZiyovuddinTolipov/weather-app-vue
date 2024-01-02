@@ -16,7 +16,7 @@ body::-webkit-scrollbar
 }
 .scrollbar-style::-webkit-scrollbar
 {
-	height: 10px;
+	height: 3px;
 	background-color: #35aaee;
 }
 

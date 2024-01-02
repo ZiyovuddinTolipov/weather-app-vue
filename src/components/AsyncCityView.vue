@@ -31,7 +31,7 @@
                 }}
             </p>
             <p class="text-8xl mb-8">
-                {{ Math.round(weatherData.current.temp) }}&deg;
+                {{ Math.round((weatherData.current.temp - 32) * 5 / 9) }}&deg;
             </p>
             <p>
                 Feels like
@@ -50,7 +50,7 @@
         <div class="max-w-screen-md w-full py-12">
             <div class="mx-8 text-white">
                 <h2 class="mb-4">Hourly Weather</h2>
-                <div class="flex gap-10 overflow-x-scroll scrollbar-style">
+                <div class="flex gap-10 overflow-x-scroll scrollbar-style pb-4">
                     <div v-for="hourData in weatherData.hourly" :key="hourData.dt" class="flex flex-col gap-4 items-center">
                         <p class="whitespace-nowrap text-md">
                             {{
@@ -64,7 +64,7 @@
                         <img class="w-auto h-[50px] object-cover" :src="`http://openweathermap.org/img/wn/${hourData.weather[0].icon}@2x.png`
                                 " alt="" />
                         <p class="text-xl">
-                            {{ Math.round(hourData.temp) }}&deg;
+                            {{ Math.round((hourData.temp - 32) * 5 / 9) }}&deg;
                         </p>
                     </div>
                 </div>
@@ -91,13 +91,12 @@
                     <img class="w-[50px] h-[50px] object-cover" :src="`http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`
                             " alt="" />
                     <div class="flex flex-1 justify-end">
-                        <p>{{ Math.round(day.temp.max) }} </p>&deg;/
-                        <p> {{ Math.round(day.temp.min) }}</p>&deg;
+                        <p>{{ Math.round((day.temp.max - 32) * 5 / 9) }} </p>&deg;/
+                        <p> {{ Math.round((day.temp.min - 32) * 5 / 9) }}</p>&deg;
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="flex items-center gap-2 py-12 text-white cursor-pointer duration-150 hover:text-red-500"
             @click="removeCity">
             <i class="fa-solid fa-trash"></i>
@@ -149,4 +148,3 @@ const removeCity = () => {
     });
 };
 </script>
-  
