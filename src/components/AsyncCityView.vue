@@ -35,7 +35,7 @@
             </p>
             <p>
                 Feels like
-                {{ Math.round(weatherData.current.feels_like) }} &deg;
+                {{ Math.round((weatherData.current.feels_like - 32) * 5 / 9) }} &deg;
             </p>
             <p class="capitalize">
                 {{ weatherData.current.weather[0].description }}
