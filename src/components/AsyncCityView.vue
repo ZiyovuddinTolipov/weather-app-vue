@@ -76,7 +76,7 @@
         <!-- Weekly Weather -->
         <div class="max-w-screen-md w-full py-12">
             <div class="mx-8 text-white">
-                <h2 class="mb-4 flex flex-row justify-between items-center"><span>7 Day Forecast</span> <span>Img</span> <span></span></h2>
+                <h2 class="mb-4">7 Day Forecast</h2>
                 <div v-for="day in weatherData.daily" :key="day.dt" class="flex items-center">
                     <p class="flex-1">
                         {{
