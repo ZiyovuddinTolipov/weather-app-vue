@@ -12,7 +12,7 @@
                 <i class="fa-solid fa-circle-info text-xl hover:text-weather-secondary duration-150 cursor-pointer"
                     @click="toggleModal"></i>
                 <i class="fa-solid fa-plus text-xl hover:text-weather-secondary duration-150 cursor-pointer"
-                    @click="addCity" v-if="route.query"></i>
+                    @click="addCity" v-if="route.query.preview"></i>
             </div>
 
             <BaseModal :modalActive="modalActive" @close-modal="toggleModal">
@@ -73,7 +73,7 @@ const addCity = () => {
         city: route.params.city,
         coords: {
             lat: route.query.lat,
-            lng: route.query.lng,
+            lon: route.query.lon,
         },
     };
 
