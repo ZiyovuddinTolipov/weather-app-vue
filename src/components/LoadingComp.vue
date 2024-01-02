@@ -1,94 +1,89 @@
-<template>
-    <div>
-        <Suspense>
-            <AsyncCityView />
-            <template #fallback>
-                <div class="wrapper">
-                    <div class="sun"></div>
-                    <div class="cloud">
-                        <div class="cloud1">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                        <div class="cloud1 c_shadow">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div>
+<template >
+    <div class="wrapper">
+        <div class="sun"></div>
+        <div class="cloud">
+            <div class="cloud1">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="cloud1 c_shadow">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
 
-                    <div class="cloud_s">
-                        <div class="cloud1">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                        <div class="cloud1 c_shadow">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div>
+        <div class="cloud_s">
+            <div class="cloud1">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="cloud1 c_shadow">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
 
-                    <div class="cloud_vs">
-                        <div class="cloud1">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                        <div class="cloud1 c_shadow">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="haze"></div>
-                    <div class="haze_stripe"></div>
-                    <div class="haze_stripe"></div>
-                    <div class="haze_stripe"></div>
-                    <div class="thunder"></div>
-                    <div class="rain">
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div class="sleet">
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>
-            </template>
-        </Suspense>
+        <div class="cloud_vs">
+            <div class="cloud1">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="cloud1 c_shadow">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div class="haze"></div>
+        <div class="haze_stripe"></div>
+        <div class="haze_stripe"></div>
+        <div class="haze_stripe"></div>
+        <div class="thunder"></div>
+        <div class="rain">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="sleet">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
     </div>
 </template>
-<script setup>
-import AsyncCityView from '@/components/AsyncCityView.vue';
+<script>
+
 </script>
 <style scoped>
+
+
 .wrapper {
     width: 150px;
     height: 150px;
@@ -858,5 +853,4 @@ import AsyncCityView from '@/components/AsyncCityView.vue';
     100% {
         oapcity: 0;
     }
-}
-</style>
+}</style>
