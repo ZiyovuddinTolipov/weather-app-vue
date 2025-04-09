@@ -112,7 +112,7 @@ import { useRoute, useRouter } from "vue-router";
 const route = useRoute();
 const getWeatherData = async () => {
     try {
-        const weatherData = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${route.query.lat}&lon=${route.query.lon}&exclude={part}&appid=b4093de65a4ffb936d46af487ce0ff79&units=imperial`);
+        const weatherData = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${route.query.lat}&lon=${route.query.lon}&exclude={part}&appid=f00151741afde34ceb3fb7d7b6334c9a&units=imperial`);
         // cal current date & time
         const localOffset = new Date().getTimezoneOffset() * 60000;
         const utc = weatherData.data.current.dt * 1000 + localOffset;
